@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <title>final</title>
+   <link href="./final.css" rel="stylesheet">
+   <script src="./final.js"></script>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="maintext">코드캠프 회원가입</div>
+      <div class="inputTextBox">
+         <input type="text" class="inputTextBox_item" id="email" placeholder="이메일을 입력해 주세요." oninput="inputText()">
+         <input type="text" class="inputTextBox_item" id="name" placeholder="이름을 입력해 주세요." oninput="inputText()">
+         <input type="password" class="inputTextBox_item" id="pw1" placeholder="비밀번호를 입력해 주세요." oninput="inputText()">
+         <input type="password" class="inputTextBox_item" id="pw2" placeholder="비밀번호를 다시 입력해 주세요." oninput="inputText()">
+      </div>
+      <div class="phoneBox">
+         <input type="text" class="phoneBoxInput" id="phone1" oninput="phoneNumMove1()" maxlength="3">-
+         <input type="text" class="phoneBoxInput" id="phone2" oninput="phoneNumMove2()" maxlength="4">-
+         <input type="text" class="phoneBoxInput" id="phone3" maxlength="4">
+      </div>
+      <div class="confirm">
+         <span id="confirmNum">000000</span>
+         <button id="confirmSend" disabled="true" onclick="confirmSend()">인증번호 전송</button>
+      </div>
+      <div class="confirm">
+         <span id="confirmTime">3:00</span>
+         <button id="confirmCheck" disabled="true" onclick="confirmCheck()">인증확인</button>
+      </div>
+      <select>
+         <option disabled="true" selected="true">지역을 선택하세요.</option>
+         <option>서울</option>
+         <option>경기</option>
+         <option>대전</option>
+      </select>
+      <div class="gender">
+         <input type="radio" name="gender">여성
+         <input type="radio" name="gender">남성
+      </div>
+      <div class="dividLine"></div>
+      <button id="signup" disabled="true" onclick="signup()">가입하기</button>
+   </div>
+</body>
+</html>
